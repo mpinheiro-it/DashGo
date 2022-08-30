@@ -24,7 +24,7 @@ export default function SignIn() {
           type="submit" 
           mt="6" 
           colorScheme="pink" >Entrar
-        </Button>
+        </Button>        
 
       </Flex>
     </Flex>

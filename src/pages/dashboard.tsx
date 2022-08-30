@@ -4,7 +4,7 @@ import { Header } from "../components/Form/Header";
 import { Sidebar } from "../components/Form/Sidebar";
 
 const Chart = dynamic(() => import('react-apexcharts'), {
-    ssr: false,
+    ssr: false,    
 });
 
 const options = {
