@@ -15,20 +15,20 @@ export function makeServer() {
 
         factories: {
             user: Factory.extend({
-                name(i) {
+                name(i: number) {
                     return `User ${i + 1}`;
                 },
                 email() {
                     return faker.internet.email().toLowerCase();
                 },
-                createAt() {
+                created_at() {
                     return faker.date.recent(10);
                 },
             })
         },
 
         seeds(server) {
-            server.createList('user', 200)
+            server.createList('user', 10)
         },
 
         routes() {//usando mirage shorthands
@@ -38,7 +38,7 @@ export function makeServer() {
             this.get('/users');
             this.post('/users');
 
-            this.namespace = '';
+            this.namespace = "";
             this.passthrough();
         }
     })
